@@ -3,7 +3,7 @@
  nnoremap <F2> :NERDTreeToggle<CR>
  let mapleader = ","
  colorscheme desertEx
- set guifont=Consolas:h12
+ set guifont=Consolas:h11
 
  "map keys for switching split pane view
  " FIXME : cmd shift left is mapped to go to the start of the line so this does not
@@ -22,8 +22,8 @@ map <leader>d :exec("CocoaDoc ".expand("<cword>"))<CR>
 
 " swipe gestures for MacVim
 if has("gui_macvim")
-"  set guifont=Monaco:h10         " Monaco 10 is my favorite font
-"  set noantialias                " Especially when it isn't aliased
+  set guifont=Monaco:h10         " Monaco 10 is my favorite font
+  set noantialias                " Especially when it isn't aliased
 "  nnoremap <SwipeLeft> :bprev<CR> " Swipeleft to change buffer
 "  nnoremap <SwipeRight> :bnext<CR>
 endif
@@ -37,12 +37,10 @@ cmap jj <C-[>
 map ; :
 
 "easy navigation between split screens
-"map <C-J> <C-W>j<C-W>_
-"map <C-K> <C-W>k<C-W>_
-map <Leader>j <C-W>j<C-W>
-map <Leader>k <C-W>k<C-W>
-map <Leader>h <C-W>h<C-W>
-map <Leader>l <C-W>l<C-W>
+map <Leader>j <C-W>j<C-W><Esc>
+map <Leader>k <C-W>k<C-W><Esc>
+map <Leader>h <C-W>h<C-W><Esc>
+map <Leader>l <C-W>l<C-W><Esc>
 
 "hide the toolbar by default
 set guioptions-=T
@@ -50,3 +48,10 @@ set guioptions-=T
 "ignore files in CntrlP or Command-t
 "The wildignore is being controlled by gitignore vim plugin
 "set wildignore+=*/node_modules/*,*/public/*
+"
+
+
+"configuration for a.vim
+let g:alternateExtensions_m = "h"
+let g:alternateExtensions_h = "m"
+map <leader>s :A
