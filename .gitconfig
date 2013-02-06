@@ -1,0 +1,15 @@
+[user]
+	name = Trunal Bhanse
+	email = trunalb@gmail.com
+[alias]
+    st = status
+    sub = submodule update --recursive
+    p = pull --rebase
+    rs = reset --hard HEAD
+    co = checkout
+	  datetag = !git tag `date +%Y%m%d%H%M`
+    amend = commit --amend -C HEAD
+    undo = reset --soft HEAD^
+    graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[color]
+    ui = auto
