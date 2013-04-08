@@ -11,5 +11,9 @@
     amend = commit --amend -C HEAD
     undo = reset --soft HEAD^
     graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
+    snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
 [color]
     ui = auto
