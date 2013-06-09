@@ -1,9 +1,13 @@
 " Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
- nnoremap <F7> :BufExplorer<CR>
+ nnoremap <F7> :BuffergatorToggle<CR>
  nnoremap <F2> :NERDTreeToggle<CR>
  let mapleader = ","
- colorscheme desertEx
- set guifont=Consolas:h11
+ "colorscheme desertEx
+ "set background=light
+ colorscheme solarized
+ "syntax enable
+ set guifont=Consolas:h12
+ "set guifont=inconsolata:h11
 
  "map keys for switching split pane view
  " FIXME : cmd shift left is mapped to go to the start of the line so this does not
@@ -22,8 +26,8 @@ map <leader>d :exec("CocoaDoc ".expand("<cword>"))<CR>
 
 " swipe gestures for MacVim
 if has("gui_macvim")
-  set guifont=Monaco:h10         " Monaco 10 is my favorite font
-  set noantialias                " Especially when it isn't aliased
+  "set guifont=Monaco:h10         " Monaco 10 is my favorite font
+  "set noantialias                " Especially when it isn't aliased
 "  nnoremap <SwipeLeft> :bprev<CR> " Swipeleft to change buffer
 "  nnoremap <SwipeRight> :bnext<CR>
 endif
@@ -57,9 +61,24 @@ let g:alternateExtensions_h = "m"
 map <leader>s :A
 
 " Settings for VimClojure
-let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
-let g:clj_paren_rainbow=1           " Rainbow parentheses'!
+"let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
+"let g:clj_paren_rainbow=1           " Rainbow parentheses'!
 
 " Relative line numbers
 set nonumber
 set relativenumber
+
+
+"automatically load configuration changes
+"Taken from : http://bit.ly/ZWmncJ
+"augroup myvimrc
+    "au!
+    "au BufWritePost .gvimrc.after so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+"augroup END
+
+
+"code folding
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
