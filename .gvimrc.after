@@ -60,10 +60,6 @@ let g:alternateExtensions_m = "h"
 let g:alternateExtensions_h = "m"
 map <leader>s :A
 
-" Settings for VimClojure
-"let g:clj_highlight_builtins=1      " Highlight Clojure's builtins
-"let g:clj_paren_rainbow=1           " Rainbow parentheses'!
-
 " Relative line numbers
 set nonumber
 set relativenumber
@@ -82,3 +78,8 @@ set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+"Dash Settings
+    let g:dash_map = {
+        \ 'javascript' : 'backbone'
+        \ }
