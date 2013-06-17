@@ -7,9 +7,6 @@
 [submodule ".janus/funcoo.vim"]
 	path = .janus/funcoo.vim
 	url = https://github.com/rizzatti/funcoo.vim.git
-[submodule ".janus/powerline"]
-	path = .janus/powerline
-	url = https://github.com/Lokaltog/powerline.git
 [submodule ".janus/vim-surround.vim"]
 	path = .janus/vim-surround.vim
 	url = https://github.com/tpope/vim-surround.git
