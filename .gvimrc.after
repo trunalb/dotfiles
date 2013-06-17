@@ -70,7 +70,7 @@ set guioptions-=T
 
 "ignore files in CntrlP or Command-t
 "The wildignore is being controlled by gitignore vim plugin
-set wildignore+=*/node_modules/*,*/public/*
+set wildignore+=*/node_modules/*,*/public/*,*/vendor/*
 
 "NERDTree Ignore
 let NERDTreeIgnore=['node_modules$[[dir]]', 'vendor$[[dir]]']
@@ -78,7 +78,6 @@ let NERDTreeIgnore=['node_modules$[[dir]]', 'vendor$[[dir]]']
 " Relative line numbers
 set nonumber
 set relativenumber
-
 
 "automatically load configuration changes
 "Taken from : http://bit.ly/ZWmncJ
