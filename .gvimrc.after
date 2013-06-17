@@ -1,9 +1,31 @@
+"General settings. NOTE : http://bit.ly/1418Uh8
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Editing mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remap VIM 0 to first non-blank character
+map 0 ^
+
+" Delete trailing white space on save, useful for Python and CoffeeScript ;)
+func! DeleteTrailingWS()
+  exe "normal mz"
+  %s/\s\+$//ge
+  exe "normal `z"
+endfunc
+autocmd BufWrite *.js :call DeleteTrailingWS()
+
+"General settings End
+
 " Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
  nnoremap <F7> :BuffergatorToggle<CR>
  nnoremap <F2> :NERDTreeToggle<CR>
- let mapleader = ","
- "colorscheme desertEx
- "set background=light
  colorscheme solarized
  "syntax enable
  set guifont=Consolas:h12
@@ -20,12 +42,9 @@
  "  map <D-S-l> :echo 'trunal'
  "endif
 
-
-"cocoa.vim plugin options
-map <leader>d :exec("CocoaDoc ".expand("<cword>"))<CR>
-
 " swipe gestures for MacVim
 if has("gui_macvim")
+    let macvim_hig_shift_movement = 1  
   "set guifont=Monaco:h10         " Monaco 10 is my favorite font
   "set noantialias                " Especially when it isn't aliased
 "  nnoremap <SwipeLeft> :bprev<CR> " Swipeleft to change buffer
@@ -51,14 +70,10 @@ set guioptions-=T
 
 "ignore files in CntrlP or Command-t
 "The wildignore is being controlled by gitignore vim plugin
-"set wildignore+=*/node_modules/*,*/public/*
-"
+set wildignore+=*/node_modules/*,*/public/*
 
-
-"configuration for a.vim
-let g:alternateExtensions_m = "h"
-let g:alternateExtensions_h = "m"
-map <leader>s :A
+"NERDTree Ignore
+let NERDTreeIgnore=['node_modules$[[dir]]', 'vendor$[[dir]]']
 
 " Relative line numbers
 set nonumber
@@ -76,10 +91,24 @@ set relativenumber
 "code folding
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
-set nofoldenable        "dont fold by default
+"set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+"Tried this one for js files. It works correctly if you have to just fold "functions" but does not work well for Backbone classes
+"set foldmethod=syntax
+"set foldlevelstart=1
+"let javaScript_fold=1         " JavaScript
+
+nnoremap <space> za
+vnoremap <space> za
 
 "Dash Settings
     let g:dash_map = {
         \ 'javascript' : 'backbone'
         \ }
+
+
+"EasyMotion Settings
+"let g:EasyMotion_leader_key = '<Leader>'
+"let g:EasyMotion_leader_key = ','
+"

@@ -1,8 +1,10 @@
 #generic ignores
 .DS_Store
 .idea
+.sass-cache
 
 # Xcode specific things -- taken from http://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects
 xcuserdata
 project.xcworkspace
 Pods/
+node_modules
