@@ -13,3 +13,6 @@
 [submodule ".janus/zencoding-vim"]
 	path = .janus/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule ".janus/vim-powerline"]
+	path = .janus/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
