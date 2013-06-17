@@ -1,0 +1,18 @@
+[submodule ".janus/dash.vim"]
+	path = .janus/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
+[submodule ".janus/delimitMate"]
+	path = .janus/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule ".janus/funcoo.vim"]
+	path = .janus/funcoo.vim
+	url = https://github.com/rizzatti/funcoo.vim.git
+[submodule ".janus/powerline"]
+	path = .janus/powerline
+	url = https://github.com/Lokaltog/powerline.git
+[submodule ".janus/vim-surround.vim"]
+	path = .janus/vim-surround.vim
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".janus/zencoding-vim"]
+	path = .janus/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
