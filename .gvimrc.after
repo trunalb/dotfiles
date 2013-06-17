@@ -106,8 +106,10 @@ vnoremap <space> za
         \ 'javascript' : 'backbone'
         \ }
 
-
 "EasyMotion Settings
 "let g:EasyMotion_leader_key = '<Leader>'
 "let g:EasyMotion_leader_key = ','
-"
+
+
+"ctrlp settings
+map <Leader>t :CtrlP<CR>
