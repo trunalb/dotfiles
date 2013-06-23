@@ -1,5 +1,10 @@
 call janus#disable_plugin('vroom')
-call janus#disable_plugin('zoomwin')
+"call janus#disable_plugin('zoomwin')
 call janus#disable_plugin('unimpaired')
-"call janus#disable_plugin('tagbar')
+call janus#disable_plugin('tagbar')
 call janus#disable_plugin('nrrwrgn')
+call janus#disable_plugin('Powerline')
+
+"remember folds
+autocmd BufWrite * mkview
+autocmd BufRead * silent loadview

@@ -19,3 +19,6 @@
 [submodule ".janus/vim-gitignore"]
 	path = .janus/vim-gitignore
 	url = https://github.com/vim-scripts/gitignore.git
+[submodule ".janus/vim-clojure-static"]
+	path = .janus/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static.git
