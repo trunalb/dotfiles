@@ -28,8 +28,9 @@ autocmd BufWrite *.js :call DeleteTrailingWS()
  nnoremap <F2> :NERDTreeToggle<CR>
  colorscheme solarized
  "syntax enable
- set guifont=Consolas:h12
+ "set guifont=Consolas:h12
  "set guifont=inconsolata:h11
+ set guifont=Source\ Code\ Pro:h10
 
  "map keys for switching split pane view
  " FIXME : cmd shift left is mapped to go to the start of the line so this does not
@@ -161,3 +162,9 @@ map <Leader>t :CtrlP<CR>
 
 "ctags settings
 "set tags=./tags,tags;/
+"
+"
+
+"options for Ag search
+"let g:agprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'
+"let g:ackprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'

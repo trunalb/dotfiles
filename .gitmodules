@@ -22,3 +22,6 @@
 [submodule ".janus/vim-clojure-static"]
 	path = .janus/vim-clojure-static
 	url = https://github.com/guns/vim-clojure-static.git
+[submodule ".janus/ag.vim"]
+	path = .janus/ag.vim
+	url = https://github.com/rking/ag.vim.git

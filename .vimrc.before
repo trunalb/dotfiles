@@ -5,5 +5,5 @@ call janus#disable_plugin('unimpaired')
 call janus#disable_plugin('nrrwrgn')
 
 "remember folds
-autocmd BufWrite * mkview
-autocmd BufRead * silent loadview
+"autocmd BufWrite * mkview
+"autocmd BufRead * silent loadview
