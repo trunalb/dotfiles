@@ -95,4 +95,4 @@ let g:ctrlp_custom_ignore = {
 
 "options for Ag search
 "let g:agprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'
-"let g:ackprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'
+let g:ackprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'
