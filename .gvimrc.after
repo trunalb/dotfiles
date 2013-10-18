@@ -88,11 +88,15 @@ vnoremap <space> za
 
 "ctrlp settings
 map <Leader>t :CtrlP<CR>
+map <Leader>o :CtrlP<CR>
 unlet g:ctrlp_custom_ignore 
 let g:ctrlp_custom_ignore = {
 \ 'file': '\v(\.js|\.css|\.scss|\.html|\.json|\.sh)@<!$'
 \ }
+let g:ctrlp_switch_buffer=0
 
 "options for Ag search
-"let g:agprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'
 let g:ackprg = '/usr/local/bin/ag --smart-case --ignore node_modules --ignore dist --ignore vendor --column'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
