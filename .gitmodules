@@ -10,9 +10,6 @@
 [submodule ".janus/vim-surround.vim"]
 	path = .janus/vim-surround.vim
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".janus/zencoding-vim"]
-	path = .janus/zencoding-vim
-	url = https://github.com/mattn/zencoding-vim.git
 [submodule ".janus/vim-powerline"]
 	path = .janus/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
@@ -25,3 +22,6 @@
 [submodule ".janus/ag.vim"]
 	path = .janus/ag.vim
 	url = https://github.com/rking/ag.vim.git
+[submodule ".janus/emmet-vim"]
+	path = .janus/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

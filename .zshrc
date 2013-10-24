@@ -19,7 +19,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew pip git svn textmate)
+plugins=(osx brew pip git textmate)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -63,15 +63,15 @@ alias gup='git stash;git pull --rebase;git stash pop;'
 alias tlog='tail -f /private/var/log/apache2/error_log'
 alias ws='cd ~/Documents/workspace'
 alias dev='cd ~/Documents/workspace/localnut-ember'
-alias simulators='cd /Users/trunalb/Library/Application\ Support/iPhone\ Simulator'
+alias simulators='cd /Users/trunal/Library/Application\ Support/iPhone\ Simulator'
 alias vi='vim'
 alias vim='mvim'
 alias xmpp='cd /Applications/XAMPP/'
-alias gextensions='cd /Users/trunalb/Library/Application\ Support/Google/Chrome/Default/Extensions/'
+alias gextensions='cd /Users/trunal/Library/Application\ Support/Google/Chrome/Default/Extensions/'
 alias nginx_conf='cd /usr/local/etc/nginx'
 alias ts='tig status'
 
 export PATH=~/bin/:$PATH
 
 #SCM Breeze settings
-[ -s "/Users/trunalb/.scm_breeze/scm_breeze.sh" ] && source "/Users/trunalb/.scm_breeze/scm_breeze.sh"
+[ -s "/Users/trunal/.scm_breeze/scm_breeze.sh" ] && source "/Users/trunal/.scm_breeze/scm_breeze.sh"
