@@ -7,3 +7,7 @@ call janus#disable_plugin('nrrwrgn')
 "remember folds
 "autocmd BufWrite * mkview
 "autocmd BufRead * silent loadview
+
+
+let mapleader = ","
+let g:ctrlp_working_path_mode = 0
