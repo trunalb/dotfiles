@@ -19,7 +19,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew pip git textmate)
+plugins=(osx brew pip git textmate autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -49,14 +49,6 @@ export EDITOR='vim'
 webdriver_chrome_driver=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-#autojump settings begin
-autoload -U compinit; compinit
-export AUTOJUMP_IGNORE_CASE=1
-export AUTOJUMP_KEEP_ALL_ENTRIES=1
-[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-#autojump settings end
-
 
 #git aliases
 alias gup='git stash;git pull --rebase;git stash pop;'
