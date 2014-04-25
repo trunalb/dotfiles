@@ -34,9 +34,11 @@ autocmd BufWrite *.js :call DeleteTrailingWS()
 
 " swipe gestures for MacVim
 if has("gui_macvim")
-    let macvim_hig_shift_movement = 1  
- 
-nnoremap <F3> :ZoomWin<CR>
+    let macvim_hig_shift_movement = 1
+
+"nnoremap <F3> :ZoomWin<CR>
+"shortcut for vimroom
+nnoremap <F3> :VimroomToggle<CR>
 
 "refactor word
 nnoremap <Leader>r *Nciw
@@ -89,9 +91,9 @@ vnoremap <space> za
 "ctrlp settings
 map <Leader>t :CtrlP<CR>
 map <Leader>o :CtrlP<CR>
-unlet g:ctrlp_custom_ignore 
+unlet g:ctrlp_custom_ignore
 let g:ctrlp_custom_ignore = {
-\ 'file': '\v(\.js|\.css|\.scss|\.html|\.json|\.sh)@<!$'
+\ 'file': '\v(\.js|\.css|\.scss|\.html|\.json|\.sh|\.erb|\.coffee|\.rb|\.mustache|\.hbs)@<!$'
 \ }
 let g:ctrlp_switch_buffer=0
 
