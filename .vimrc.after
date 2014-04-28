@@ -38,7 +38,8 @@ if has("gui_macvim")
 
 "nnoremap <F3> :ZoomWin<CR>
 "shortcut for vimroom
-nnoremap <F3> :VimroomToggle<CR>
+"nnoremap <F3> :VimroomToggle<CR>
+nnoremap <F3> :Goyo<CR>
 
 "refactor word
 nnoremap <Leader>r *Nciw
