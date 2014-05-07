@@ -19,7 +19,7 @@
 [core]
 	excludesfile = /Users/trunalbhanse/.dotfiles/.gitignore_global
 [push]
-	default = simple
+	default = current
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

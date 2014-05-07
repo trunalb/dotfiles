@@ -36,10 +36,9 @@ autocmd BufWrite *.js :call DeleteTrailingWS()
 if has("gui_macvim")
     let macvim_hig_shift_movement = 1
 
-"nnoremap <F3> :ZoomWin<CR>
-"shortcut for vimroom
-"nnoremap <F3> :VimroomToggle<CR>
 nnoremap <F3> :Goyo<CR>
+let g:goyo_width = 100
+
 
 "refactor word
 nnoremap <Leader>r *Nciw
@@ -85,7 +84,8 @@ vnoremap <space> za
 
 "Dash Settings
     let g:dash_map = {
-        \ 'javascript' : 'backbone'
+        \ 'javascript' : 'backbone',
+        \ 'ruby' : 'ruby rails'
         \ }
 
 

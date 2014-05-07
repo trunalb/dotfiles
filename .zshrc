@@ -63,7 +63,12 @@ alias gextensions='cd /Users/trunal/Library/Application\ Support/Google/Chrome/D
 alias nginx_conf='cd /usr/local/etc/nginx'
 alias ts='tig status'
 
+#shell functions
+txa (){
+  tmux a -t $1
+}
+
 export PATH=~/bin/:$PATH
 
 #SCM Breeze settings
-[ -s "/Users/trunal/.scm_breeze/scm_breeze.sh" ] && source "/Users/trunal/.scm_breeze/scm_breeze.sh"
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
