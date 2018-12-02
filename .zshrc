@@ -19,7 +19,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx brew pip git textmate autojump)
+plugins=(osx brew git autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -28,16 +28,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
 export PATH=$HOME/packages/bin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=$PATH:/usr/local/Cellar/ruby/1.9.2-p290/bin
-export PATH=$PATH:/Users/trunalb/.rvm/gems/ruby-1.9.3-p125/bin
 
-# JAVA
-JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export JAVA_HOME
-
-# MYSQL
-PATH=${PATH}:/usr/local/mysql/bin
-export PATH
 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
@@ -45,22 +36,10 @@ zstyle ':completion:*' cache-path ~/.oh-my-zsh/cache
 
 export EDITOR='vim'
 
-#trunal
-webdriver_chrome_driver=/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 #git aliases
 alias gup='git stash;git pull --rebase;git stash pop;'
-alias tlog='tail -f /private/var/log/apache2/error_log'
-alias ws='cd ~/Documents/workspace'
-alias dev='cd ~/Documents/workspace/localnut-ember'
-alias simulators='cd /Users/trunal/Library/Application\ Support/iPhone\ Simulator'
 alias vi='vim'
 alias vim='mvim'
-alias xmpp='cd /Applications/XAMPP/'
-alias gextensions='cd /Users/trunal/Library/Application\ Support/Google/Chrome/Default/Extensions/'
-alias nginx_conf='cd /usr/local/etc/nginx'
 alias ts='tig status'
 
 #shell functions
