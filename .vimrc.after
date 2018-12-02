@@ -26,11 +26,10 @@ autocmd BufWrite *.js :call DeleteTrailingWS()
 " Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
  nnoremap <F7> :BuffergatorToggle<CR>
  nnoremap <F2> :NERDTreeToggle<CR>
+ set background=light
  colorscheme solarized
  "syntax enable
- "set guifont=Consolas:h12
- "set guifont=inconsolata:h11
- set guifont=Source\ Code\ Pro:h11
+ set guifont=Source\ Code\ Pro:h12
 
 " swipe gestures for MacVim
 if has("gui_macvim")
@@ -83,10 +82,10 @@ nnoremap <space> za
 vnoremap <space> za
 
 "Dash Settings
-    let g:dash_map = {
-        \ 'javascript' : 'backbone',
-        \ 'ruby' : 'ruby rails'
-        \ }
+    "let g:dash_map = {
+        "\ 'javascript' : 'backbone',
+        "\ 'ruby' : 'ruby rails'
+        "\ }
 
 
 "ctrlp settings
