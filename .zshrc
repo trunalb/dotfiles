@@ -37,7 +37,6 @@ zstyle ':completion:*' cache-path ~/.oh-my-zsh/cache
 export EDITOR='vim'
 
 #git aliases
-alias gup='git stash;git pull --rebase;git stash pop;'
 alias vi='vim'
 alias vim='mvim'
 alias ts='tig status'
@@ -48,6 +47,3 @@ txa (){
 }
 
 export PATH=~/bin/:$PATH
-
-#SCM Breeze settings
-[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
