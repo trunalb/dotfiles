@@ -28,6 +28,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
 export PATH=$HOME/packages/bin:$PATH
 export PATH=$HOME/bin:$PATH
+export PATH=~/bin/:$PATH
 
 
 zstyle ':completion:*' accept-exact '*(N)'
@@ -36,14 +37,43 @@ zstyle ':completion:*' cache-path ~/.oh-my-zsh/cache
 
 export EDITOR='vim'
 
+
+#kubernetis kubectl editor
+export KUBE_EDITOR='vi'
+
+# Preferred editor for local and remote sessions
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='mvim'
+ fi
+
 #git aliases
 alias vi='vim'
 alias vim='mvim'
 alias ts='tig status'
+alias sls='screen -ls'
 
 #shell functions
 txa (){
   tmux a -t $1
 }
 
-export PATH=~/bin/:$PATH
+find_process_on_port () {
+  lsof -i:$1 | awk '{print $2}' | tail -1
+}
+
+attach_screen () {
+  screen -r $1
+}
+
+kill_screen () {
+  screen -X -S $1 kill
+}
+
+curl_perf () {
+  curl -H 'Cache-Control: no-cache' -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
+}
+
+# things specific to confluent
+if [ -f '/Users/trunalbhanse/.zshrc.confluent' ]; then . '/Users/trunalbhanse/.zshrc.confluent'; fi
