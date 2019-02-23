@@ -35,9 +35,6 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.oh-my-zsh/cache
 
-export EDITOR='vim'
-
-
 #kubernetis kubectl editor
 export KUBE_EDITOR='vi'
 
@@ -49,8 +46,6 @@ export KUBE_EDITOR='vi'
  fi
 
 #git aliases
-alias vi='vim'
-alias vim='mvim'
 alias ts='tig status'
 alias sls='screen -ls'
 
