@@ -16,7 +16,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(zsh-autosuggestions osx brew git autojump)
+plugins=(osx brew git autojump)
 
 # Customize to your needs...
 #export PATH=/usr/bin:/bin:/usr/sbin:/sbin:
@@ -43,12 +43,20 @@ export KUBE_EDITOR='vi'
 #alias vi='vim'
 #alias vim='mvim'
 alias ts='tig status'
-alias mvim='/Applications/MacVim.app/Contents/bin/mvim'
-alias cpwd="pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'"
 alias sls='screen -ls'
+alias mvim='/usr/local/Cellar/macvim/8.2-163/bin/mvim'
+alias cpwd="pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'"
 #command for startinga screen session without going in the screen session
 alias startzk='screen -dmS zk $SHELL -c "cd /Users/trunal/Documents/workspace/kafka_2.11-2.1.0; bin/zookeeper-server-start.sh config/zookeeper.properties; exec $SHELL"'
 #alias python='/usr/local/bin/python3'
+#
+
+# Preferred editor for local and remote sessions
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='mvim'
+ fi
 
 #shell functions
 txa (){
@@ -71,3 +79,4 @@ curl_perf () {
   curl -H 'Cache-Control: no-cache' -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
 }
 
+source $ZSH/oh-my-zsh.sh
