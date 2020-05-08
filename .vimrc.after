@@ -93,7 +93,8 @@ map <Leader>t :CtrlP<CR>
 map <Leader>o :CtrlP<CR>
 unlet g:ctrlp_custom_ignore
 let g:ctrlp_custom_ignore = {
-\ 'file': '\v(\.js|\.css|\.scss|\.html|\.json|\.sh|\.erb|\.coffee|\.rb|\.mustache|\.hbs)@<!$'
+\ 'file': '\v(\.js|\.css|\.scss|\.html|\.json|\.sh|\.erb|\.coffee|\.rb|\.mustache|\.hbs)@<!$',
+\ 'dir': '\v__tests__\',
 \ }
 let g:ctrlp_switch_buffer=0
 
