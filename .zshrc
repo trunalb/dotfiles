@@ -4,7 +4,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Set to the name theme to load.
 # Look in ~/.oh-my-zsh/themes/
 #export ZSH_THEME="kennethreitz"
-export ZSH_THEME="miloshadzic"
+#export ZSH_THEME="miloshadzic"
+#export ZSH_THEME="pygmalion"
+export ZSH_THEME="mortalscumbag"
 #export ZSH_THEME="sunrise"
 #export ZSH_THEME="kphoen"
 
@@ -28,7 +30,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/python:$PATH
 export PATH=$HOME/packages/bin:$PATH
 export PATH=$HOME/bin:$PATH
-export PATH=/Users/trunalbhanse/bin/google-cloud-sdk/bin/:$PATH
+export PATH=$HOME/bin/google-cloud-sdk/bin/:$PATH
 
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
@@ -38,7 +40,7 @@ zstyle ':completion:*' cache-path ~/.oh-my-zsh/cache
 export KUBE_EDITOR='vi'
 
 # things specific to confluent
-if [ -f '/Users/trunalbhanse/.zshrc.confluent' ]; then . '/Users/trunalbhanse/.zshrc.confluent'; fi
-if [ -f '/Users/trunalbhanse/.zshrc.after' ]; then . '/Users/trunalbhanse/.zshrc.after'; fi
+if [ -f "${HOME}/.zshrc.confluent" ]; then . "${HOME}/.zshrc.confluent"; fi
+if [ -f "${HOME}/.zshrc.after" ]; then . "${HOME}/.zshrc.after"; fi
 
 [ -s "/Users/trunalbhanse/.scm_breeze/scm_breeze.sh" ] && source "/Users/trunalbhanse/.scm_breeze/scm_breeze.sh"

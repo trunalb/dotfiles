@@ -41,10 +41,9 @@ export KUBE_EDITOR='vi'
 
 #git aliases
 #alias vi='vim'
-#alias vim='mvim'
 alias ts='tig status'
 alias sls='screen -ls'
-alias mvim='/usr/local/Cellar/macvim/8.2-163/bin/mvim'
+alias mvim='/usr/local/bin/mvim'
 alias cpwd="pwd | tr -d '\n' | pbcopy && echo 'pwd copied to clipboard'"
 #command for startinga screen session without going in the screen session
 alias startzk='screen -dmS zk $SHELL -c "cd /Users/trunal/Documents/workspace/kafka_2.11-2.1.0; bin/zookeeper-server-start.sh config/zookeeper.properties; exec $SHELL"'
