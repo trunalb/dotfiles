@@ -36,11 +36,7 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.oh-my-zsh/cache
 
-#kubernetis kubectl editor
-export KUBE_EDITOR='vi'
-
 # things specific to confluent
 if [ -f "${HOME}/.zshrc.confluent" ]; then . "${HOME}/.zshrc.confluent"; fi
 if [ -f "${HOME}/.zshrc.after" ]; then . "${HOME}/.zshrc.after"; fi
 
-[ -s "/Users/trunalbhanse/.scm_breeze/scm_breeze.sh" ] && source "/Users/trunalbhanse/.scm_breeze/scm_breeze.sh"
